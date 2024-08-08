@@ -19,7 +19,14 @@ Se creó un menú para facilitar al usuario el uso del programa. Se podrán regi
 
 | Nombre | Descripción |
 |--|--|
-| | |
+| compras.json| Contiene la información de las compras realizadas. |
+|empleados.json| Contiene la información de los empleados que hay en la panadería.|
+|main.py| Contiene el código utilizado para la realización del programa.|
+|medicamentos.json| Contiene la información sobre los medicamentos que hay en la farmacia, su precio y cantidad stock.|
+|pacientes.json| Información de pacientes que han realizado compras en la farmacia.|
+|proveedores.json| Información de los proveedores que suministran la farmacia.|
+|README.md| Explicación del código y archivos utilizados para la realización de este.|
+|ventas.json| Registro de las ventas realizadas en la farmacia.|
 
 ## Instrucciones
 
