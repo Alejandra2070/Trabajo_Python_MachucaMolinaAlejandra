@@ -151,4 +151,4 @@ elif(opc==2):
 elif(opc==3):
     print("Muchas gracias por utilizar nuestro programa. Vuelve pronto.")
 
-#Desarrollado por Alejandra Machuca Grupo T2
+#Desarrollado por Alejandra Machuca Grupo T2 CampusLands
