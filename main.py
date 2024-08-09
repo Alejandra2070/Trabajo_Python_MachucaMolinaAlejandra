@@ -118,7 +118,7 @@ if (opc==1):
                 "precio": precioPR
             }
         }
-        #abrir la libreria para guardar la información de la venta
+        #abrir la libreria para guardar la información de la venta.
         miInfo = abrirArchivo2()
         miInfo[0]["info"].append(registroR)
         guardarArchivo2(miInfo)
