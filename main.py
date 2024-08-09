@@ -87,37 +87,47 @@ print("""
 opc=int(input("Elige una de las opciones de nuestro menú: "))
 miInfo=[]
 if (opc==1):
+    
     miInfo=abrirArchivo2() #abrimos la libreria
     #ingresar la información de la venta
-    fechaR = str(input(date.today()))
+    fechaR = str(date.today())
     nombreCR = input("Ingresa el nombre del paciente: ")
     direccionR = int(input("Ingresa la dirección del paciente: "))
     nombreER = input("Ingresa el nombre del empleado que realizó la venta: ")
     cargoER = input("Ingresa el cargo del empleado que realizó la venta: ")
-    nombrePR = input("Ingresa el nombre del producto vendido: ")
-    cantidadPR = int(input("Ingresa la cantidad vendida del producto: "))
-    precioPR = int(input("Ingresa el precio del producto vendido: "))
-    #información para guardar la venta
-    registroR = {
-        "fechaVenta": fechaR,
-        "paciente":{
-            "nombre": nombreCR,
-            "direccion": direccionR,
-        },
-        "empleado":{
-            "nombre": nombreER,
-            "cargo": cargoER,
-        },
-        "medicamentosVendidos":{
-            "nombreMedicamento": nombrePR,
-            "cantidadVendida": cantidadPR,
-            "precio": precioPR
+    booleano = True
+    #se crea un booleano facilitar la ejecución del programa.
+    while booleano==True:
+        nombrePR = input("Ingresa el nombre del producto vendido: ")
+        cantidadPR = int(input("Ingresa la cantidad vendida del producto: "))
+        precioPR = int(input("Ingresa el precio del producto vendido: "))
+        #información para guardar la venta
+        registroR = {
+            "fechaVenta": fechaR,
+            "paciente":{
+                "nombre": nombreCR,
+                "direccion": direccionR,
+            },
+            "empleado":{
+                "nombre": nombreER,
+                "cargo": cargoER,
+            },
+            "medicamentosVendidos":{
+                "nombreMedicamento": nombrePR,
+                "cantidadVendida": cantidadPR,
+                "precio": precioPR
+            }
         }
-    }
-    #abrir la libreria para guardar la información de la venta
-    miInfo = abrirArchivo2()
-    miInfo[0]["info"].append(registroR)
-    guardarArchivo2(miInfo)
+        #abrir la libreria para guardar la información de la venta
+        miInfo = abrirArchivo2()
+        miInfo[0]["info"].append(registroR)
+        guardarArchivo2(miInfo)
+        otro=int(input("Deseas agregar otro medicamento?(1. Si/ 2. No): "))
+        if otro==1:
+            booleano=True
+        else:
+            booleano=False
+    
     #una vez guardada, se le informa al usuario
     print("La venta se guardó correctamente.")
 elif(opc==2):
